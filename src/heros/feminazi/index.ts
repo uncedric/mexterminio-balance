@@ -1,0 +1,68 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { Hero } from '../types.ts';
+import { HeroCategory } from '../../enums/HeroCategory.ts';
+import { ActionType } from '../../enums/ActionType.ts';
+import {
+  ADVENTURER_RANGED_2H_ANIMATIONS,
+  defaultMeleeAction,
+  thirdPersonAssaultRifle,
+} from '../defaults.ts';
+
+export const FEMINAZI_HERO: Hero = {
+  id: 'feminazi',
+  name: 'Frida',
+  race: 'Activista',
+  category: HeroCategory.HEALER,
+  description: 'Cancela y deconstruye a base de su pistola de colores',
+  stats: {
+    maxHealth: 125,
+    moveSpeed: 10.0,
+    hitboxSize: 0.8,
+  },
+  primaryAction: {
+    name: 'Cancelar',
+    type: ActionType.RAYCAST,
+    damage: 15,
+    cooldown: 1.0,
+    maxDistance: 50,
+    sound: 'spray.ogg',
+    burstCount: 6,
+    burstInterval: 100,
+    color: '#a538d7',
+  },
+  secondaryAction: {
+    name: 'Deconstruir',
+    description: 'Cura aliados con pintura verde',
+    type: ActionType.HEAL,
+    damage: -15,
+    cooldown: 2.0,
+    maxDistance: 20,
+    sound: 'feminazi_heal.wav',
+    burstCount: 8,
+    burstInterval: 80,
+    color: '#1ba11b',
+    leavesBulletMark: true,
+  },
+  meleeAction: defaultMeleeAction(),
+
+  voiceLines: {
+    spawn: 'feminazi_ready.ogg',
+    death: 'feminazi_down.ogg',
+  },
+  modelPath: '/models/heros/feminazi.glb',
+  renderMode: 'adventurer',
+  animations: ADVENTURER_RANGED_2H_ANIMATIONS,
+  weapon: {
+    modelPath: '/models/weapons/AssaultRifle.glb',
+    scale: 1,
+    position: [0.4, -0.3, -0.6],
+    rotation: [0, Math.PI / 2, 0],
+    barrelPosition: [0, 0.05, -0.3],
+  },
+  thirdPersonWeapon: thirdPersonAssaultRifle({ rotation: [0, 0, 0.05] }),
+  thirdPersonSecondaryWeapon: thirdPersonAssaultRifle({ rotation: [0, 0, 0.05] }),
+};

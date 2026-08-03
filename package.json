@@ -1,0 +1,42 @@
+{
+  "name": "@mexterminio/balance",
+  "version": "1.0.0",
+  "description": "Public community balance data, hero stats, beacon constants, and map waypoints for Mexterminio.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/mexterminio-balance.git"
+  },
+  "keywords": [
+    "mexterminio",
+    "game-balance",
+    "hero-stats",
+    "hero-shooter",
+    "open-source-game"
+  ],
+  "author": "Mexterminio Team",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "type-check": "tsc --noEmit",
+    "validate": "vitest run && tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "vitest": "^4.1.8",
+    "zod": "^3.24.0"
+  },
+  "peerDependencies": {
+    "zod": "^3.0.0 || ^4.0.0"
+  }
+}
