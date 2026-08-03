@@ -18,8 +18,7 @@ Este repositorio contiene los parámetros de estadísticas de héroes, ajuste de
 ## 🔗 Enlaces Oficiales y Comunidad
 
 - 🕹️ **Jugar Mexterminio**: [https://mexterminio.com](https://mexterminio.com)
-- 📖 **Documentación y Notas de Parche**: [https://mexterminio.com/docs](https://mexterminio.com/docs)
-- 💬 **Comunidad en Discord**: [https://discord.gg/mexterminio](https://discord.gg/mexterminio)
+- 💬 **Comunidad en Discord**: [https://discord.gg/esAgFN3jw6](https://discord.gg/esAgFN3jw6)
 - 🎨 **Repositorio de Assets 3D Públicos**: [mexterminio-assets](https://github.com/uncedric/mexterminio-assets)
 
 ---
