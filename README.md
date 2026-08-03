@@ -1,43 +1,52 @@
-# 🎮 Mexterminio — Public Game Balance & Map Constants
+# 🎮 Mexterminio — Balance de Juego y Constantes de Mapa
 
-Welcome to the official public game balance and map configuration repository for **[Mexterminio](https://mexterminio.com)**, the open-source multiplayer hero shooter!
+¡Bienvenido al repositorio público oficial de balance de juego y configuración de mapas para **[Mexterminio](https://mexterminio.com)**, el hero shooter multijugador open-source!
 
-This repository contains hero stats, action tuning, beacon parameters, spawn locations, shop item prices, and AI navigation waypoints. Community members can submit Pull Requests to tweak hero balance, propose map adjustments, and adjust game mode parameters.
-
----
-
-## 🔗 Official Links & Community
-
-- 🕹️ **Play Mexterminio**: [https://mexterminio.com](https://mexterminio.com)
-- 📖 **Documentation & Patch Notes**: [https://mexterminio.com/docs](https://mexterminio.com/docs)
-- 💬 **Discord Community**: [https://discord.gg/mexterminio](https://discord.gg/mexterminio)
-- 🎨 **3D Public Assets Repo**: [mexterminio-assets](https://github.com/your-org/mexterminio-assets)
+Este repositorio contiene los parámetros de estadísticas de héroes, ajuste de habilidades, tiempos de captura de beacons, coordenadas de reaparición (spawn), precios de la tienda y waypoints de navegación de la IA. La comunidad puede proponer y enviar Pull Requests con ajustes de balanceo y modificaciones de mapas.
 
 ---
 
-## 🛠️ How to Contribute Balance Tweaks
+> [!IMPORTANT]
+> ### ⚠️ Regla de Idioma para el Código (Code Language Standard)
+> **Todo el código del juego, nombres de variables, archivos, tipos e interfaces en TypeScript DEBEN estar redactados en INGLÉS.**  
+> (*All game code, variable names, file names, TypeScript types, and property keys MUST be in English.*)  
+> 
+> *Las descripciones de los Pull Requests, discusiones, incidencias (issues) y comentarios pueden ser en español o inglés.*
 
-1. **Fork this repository**.
-2. **Edit balance values** in `src/heros/`, `src/constants/`, or `src/maps/`.
-3. **Run local validation & tests**:
+---
+
+## 🔗 Enlaces Oficiales y Comunidad
+
+- 🕹️ **Jugar Mexterminio**: [https://mexterminio.com](https://mexterminio.com)
+- 📖 **Documentación y Notas de Parche**: [https://mexterminio.com/docs](https://mexterminio.com/docs)
+- 💬 **Comunidad en Discord**: [https://discord.gg/mexterminio](https://discord.gg/mexterminio)
+- 🎨 **Repositorio de Assets 3D Públicos**: [mexterminio-assets](https://github.com/uncedric/mexterminio-assets)
+
+---
+
+## 🛠️ Cómo Contribuir con Ajustes de Balance
+
+1. **Haz un Fork de este repositorio**.
+2. **Edita los valores de balance** en `src/heros/`, `src/constants/` o `src/maps/`.
+3. **Ejecuta las validaciones y pruebas locales**:
    ```bash
    npm install
    npm run validate
    ```
-4. **Open a Pull Request**. Our automated CI runner will evaluate range safety schemas (Zod) and post a **Balance Comparison Report** directly on your PR!
+4. **Abre un Pull Request**. Nuestro sistema de integración continua (CI) evaluará automáticamente las reglas de rango seguro con Zod y publicará un **Reporte de Comparación de Balance** en tu PR.
 
 ---
 
-## 📊 Repository Structure
+## 📊 Estructura del Repositorio
 
-- `src/heros/`: Stats, movement speeds, damage values, cooldowns, and action types for all heroes.
-- `src/constants/`: Beacon capture timers, queue settings, match parameters, and vehicle stats.
-- `src/maps/`: AI waypoints, spawn coordinates, and zone place definitions.
-- `src/schemas/`: Zod validation schemas enforcing min/max balance boundaries.
-- `tests/`: Integrity unit tests for hero assets, voice lines, and constants.
+- `src/heros/`: Estadísticas, velocidades de movimiento, daño, cooldowns y tipos de acciones para cada héroe.
+- `src/constants/`: Tiempos de beacons, parámetros de matchmaking, duraciones de partidas y estadísticas de vehículos.
+- `src/maps/`: Waypoints para bots de IA, posiciones de spawn y definiciones de áreas de mapa.
+- `src/schemas/`: Esquemas de validación Zod que garantizan límites de balance lógicos.
+- `tests/`: Pruebas de integración de datos y reglas de esquema.
 
 ---
 
-## 📜 License
+## 📜 Licencia
 
-[Apache-2.0 License](LICENSE) © Mexterminio Team
+[Licencia Apache-2.0](LICENSE) © Equipo Mexterminio
