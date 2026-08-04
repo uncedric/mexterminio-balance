@@ -5,6 +5,9 @@ import type {
   MarketPlaceObject,
 } from '../maps/mapObjectTypes.ts';
 import { BEACONS } from './beaconConstants.ts';
+import { MYSTERY_BOX_CONSTANTS } from './mysteryBoxConstants.ts';
+
+export { type MysteryItemType, AVAILABLE_MYSTERY_ITEMS } from './mysteryBoxConstants.ts';
 
 /**
  * Default sound per object type. Components resolve: config.sound ?? MAP_OBJECT_SOUNDS[config.type].
@@ -41,18 +44,7 @@ export const MAP_OBJECT_CONSTANTS = {
   VEHICLE_BOARD_RADIUS: 5.0,
   VEHICLE_SERVER_VALIDATION_RADIUS: 7.0,
 
-  /** Mystery Boxes & Items */
-  BOX_COOLDOWN_MS: 60_000,
-  BOX_TRIGGER_RADIUS: 2.5,
-  BOX_SERVER_VALIDATION_RADIUS: 5.0,
-  BOX_SPIN_SPEED: 1.2,
-  LANDMINE_DAMAGE: 300,
-  LANDMINE_BLAST_RADIUS: 5.5,
-  LANDMINE_DETONATION_RADIUS: 2.5,
-  LANDMINE_HEIGHT_TOLERANCE: 2.0,
-  SPEED_BOOST_DURATION_MS: 5_000,
-  SPEED_BOOST_MULTIPLIER: 2,
-  SHIELD_DURATION_MS: 5_000,
+  ...MYSTERY_BOX_CONSTANTS,
 } as const;
 
 /**

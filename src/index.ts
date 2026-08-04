@@ -18,6 +18,7 @@ export * from './constants/civilizations.ts';
 export * from './constants/enemy.ts';
 export * from './constants/game.ts';
 export * from './constants/mapObjectConstants.ts';
+export * from './constants/mysteryBoxConstants.ts';
 export * from './constants/match.ts';
 export * from './constants/objectives.ts';
 export * from './constants/player.ts';
