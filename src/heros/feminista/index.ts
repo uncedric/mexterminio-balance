@@ -12,8 +12,8 @@ import {
   thirdPersonAssaultRifle,
 } from '../defaults.ts';
 
-export const FEMINAZI_HERO: Hero = {
-  id: 'feminazi',
+export const FEMINISTA_HERO: Hero = {
+  id: 'feminista',
   name: 'Frida',
   race: 'Activista',
   category: HeroCategory.HEALER,
@@ -41,7 +41,7 @@ export const FEMINAZI_HERO: Hero = {
     damage: -15,
     cooldown: 2.0,
     maxDistance: 20,
-    sound: 'feminazi_heal.wav',
+    sound: 'feminista_heal.wav',
     burstCount: 8,
     burstInterval: 80,
     color: '#1ba11b',
@@ -55,14 +55,14 @@ export const FEMINAZI_HERO: Hero = {
     damage: -70,
     cooldown: 15.0,
     duration: 5,
-    sound: 'feminazi_heal.wav',
+    sound: 'feminista_heal.wav',
   },
 
   voiceLines: {
-    spawn: 'feminazi_ready.ogg',
-    death: 'feminazi_down.ogg',
+    spawn: 'feminista_ready.ogg',
+    death: 'feminista_down.ogg',
   },
-  modelPath: '/models/heros/feminazi.glb',
+  modelPath: '/models/heros/feminista.glb',
   renderMode: 'adventurer',
   animations: ADVENTURER_RANGED_2H_ANIMATIONS,
   weapon: {

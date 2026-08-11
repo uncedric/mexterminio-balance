@@ -47,7 +47,7 @@ export const CHAMAN_HERO: Hero = {
       color: '#81C784',
       shape: 'sphere',
     },
-    sound: 'feminazi_heal.ogg',
+    sound: 'feminista_heal.ogg',
   },
   meleeAction: defaultMeleeAction({
     name: 'Golpe de Bastón',

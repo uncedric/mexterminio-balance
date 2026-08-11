@@ -5,7 +5,7 @@
 
 import { Hero, HeroAction } from './types.ts';
 import { ActionType } from '../enums/ActionType.ts';
-import { FEMINAZI_HERO } from './feminazi/index.ts';
+import { FEMINISTA_HERO } from './feminista/index.ts';
 import { CHACALON_HERO } from './chacalon/index.ts';
 import { GODINEZ_HERO } from './godinez/index.ts';
 import { SENOR_HERO } from './senor/index.ts';
@@ -25,7 +25,7 @@ export * from './types.ts';
 export const HEROES: Record<string, Hero> = {
   // whitexican: WHITEXICAN_HERO,
   jaguar: JAGUAR_HERO,
-  feminazi: FEMINAZI_HERO,
+  feminista: FEMINISTA_HERO,
   godinez: GODINEZ_HERO,
   senor: SENOR_HERO,
   chacalon: CHACALON_HERO,
@@ -45,7 +45,7 @@ export const DEFAULT_HERO = JAGUAR_HERO;
 
 export const SELECTABLE_HERO_IDS = new Set([
   // 'whitexican',
-  'feminazi',
+  'feminista',
   'senor',
   // 'jaguar',
   // 'chaman',
