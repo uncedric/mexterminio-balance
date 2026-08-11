@@ -27,7 +27,7 @@ export const FEMINAZI_HERO: Hero = {
     name: 'Cancelar',
     type: ActionType.RAYCAST,
     damage: 15,
-    cooldown: 1.0,
+    cooldown: 1.2,
     maxDistance: 50,
     sound: 'spray.ogg',
     burstCount: 6,
