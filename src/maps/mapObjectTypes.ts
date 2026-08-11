@@ -107,7 +107,7 @@ export interface MarketPlaceObject extends BaseMapObject {
 }
 
 export interface MysteryBoxObject extends BaseMapObject {
-  type: 'box';
+  type: 'invulnerability';
 }
 
 export interface ForestTreeDetailed4Object extends BaseMapObject {

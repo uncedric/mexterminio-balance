@@ -65,11 +65,18 @@ function validateHeroAction(heroId: string, slot: string, action: HeroAction): V
     });
   }
 
-  if (action.type === ActionType.MOVEMENT && !action.impulse && !action.speedModifier) {
+  if (
+    action.type === ActionType.MOVEMENT &&
+    !action.impulse &&
+    !action.speedModifier &&
+    !action.damageReduction &&
+    !action.shieldHealth
+  ) {
     errors.push({
       heroId,
       field: `${slot}.type`,
-      message: 'Movement action should have either impulse or speedModifier',
+      message:
+        'Movement action should have either impulse, speedModifier, damageReduction, or shieldHealth',
       value: action.type,
     });
   }
@@ -101,6 +108,9 @@ function validateHero(hero: Hero): ValidationError[] {
   errors.push(...validateHeroAction(hero.id, 'primaryAction', hero.primaryAction));
   errors.push(...validateHeroAction(hero.id, 'secondaryAction', hero.secondaryAction));
   errors.push(...validateHeroAction(hero.id, 'meleeAction', hero.meleeAction));
+  if (hero.thirdAction) {
+    errors.push(...validateHeroAction(hero.id, 'thirdAction', hero.thirdAction));
+  }
 
   if (!hero.modelPath.startsWith('/models/')) {
     errors.push({

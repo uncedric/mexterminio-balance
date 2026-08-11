@@ -11,20 +11,29 @@ export const BEACON_CONSTANTS = {
   PERSIST_INTERVAL_MS: 10000,
   /** Passive healing per second for owners inside a captured, non-contested beacon. */
   HEAL_PER_SECOND: 5,
+  /** Target capture progress percentage. */
+  MAX_PROGRESS: 100,
+} as const;
+
+export const GUARDIAN_CONSTANTS = {
+  PROXIMITY_RADIUS: 30,
+  OUT_OF_COMBAT_HEAL_MS: 5000,
+  BASE_HEAL_RADIUS: 3.0,
+  STUCK_TIMEOUT_MS: 5000,
 } as const;
 
 export const BEACONS: Partial<Record<string, BeaconObject[]>> = {
   mexico: [
-    {
-      id: 'mexico_beacon_north',
-      type: 'beacon',
-      name: 'Pueblos del Norte',
-      position: [-16.392, 44.154, -60.285],
-      groundOffset: -1,
-      captureRadius: BEACON_CONSTANTS.DEFAULT_RADIUS,
-      baseCaptureTime: BEACON_CONSTANTS.DEFAULT_CAPTURE_TIME,
-      glb: 'Hut.glb',
-    },
+    // {
+    //   id: 'mexico_beacon_north',
+    //   type: 'beacon',
+    //   name: 'Pueblos del Norte',
+    //   position: [-16.392, 44.154, -60.285],
+    //   groundOffset: -1,
+    //   captureRadius: BEACON_CONSTANTS.DEFAULT_RADIUS,
+    //   baseCaptureTime: BEACON_CONSTANTS.DEFAULT_CAPTURE_TIME,
+    //   glb: 'Hut.glb',
+    // },
     {
       id: 'mexico_beacon_tenochtitlan',
       type: 'beacon',
@@ -64,7 +73,7 @@ export const BEACONS: Partial<Record<string, BeaconObject[]>> = {
       id: 'mexico_beacon_la_quemada',
       type: 'beacon',
       name: 'La Quemada',
-      position: [-98.21, 34.563, -26.508],
+      position: [-93.21, 34.563, -26.508],
       groundOffset: -1,
       captureRadius: BEACON_CONSTANTS.DEFAULT_RADIUS,
       baseCaptureTime: BEACON_CONSTANTS.DEFAULT_CAPTURE_TIME,

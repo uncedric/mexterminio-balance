@@ -10,4 +10,5 @@ export enum GameModeName {
   SANDBOX = 'Sandbox',
   OPEN_WORLD = 'OpenWorld',
   KING_OF_THE_HILL = 'KingOfTheHill',
+  ESCORT = 'Escort',
 }

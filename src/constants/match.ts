@@ -62,4 +62,9 @@ export const GAME_MODE_REGISTRY: Record<
     description: 'Controla el punto central para acumular 100 puntos y ganar.',
     isPvE: false,
   },
+  [GameModeName.ESCORT]: {
+    name: 'Escolta',
+    description: 'Escolta la carga hasta su destino',
+    isPvE: false,
+  },
 };

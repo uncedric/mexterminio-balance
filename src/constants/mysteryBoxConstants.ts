@@ -4,7 +4,8 @@ export type MysteryItemType =
   | 'landmine'
   | 'volar'
   | 'heal_circle'
-  | 'lightning_gun';
+  | 'lightning_gun'
+  | 'invisibility';
 
 /** Active pool of abilities rolled when opening a mystery box. Comment out items to disable them. */
 export const AVAILABLE_MYSTERY_ITEMS: MysteryItemType[] = [
@@ -14,9 +15,10 @@ export const AVAILABLE_MYSTERY_ITEMS: MysteryItemType[] = [
   'volar',
   'heal_circle',
   'lightning_gun',
+  'invisibility',
 ];
 
-export const MYSTERY_BOX_CONSTANTS = {
+export const INVULNERABILITY_CONSTANTS = {
   BOX_COOLDOWN_MS: 60_000,
   BOX_TRIGGER_RADIUS: 2.5,
   BOX_SERVER_VALIDATION_RADIUS: 5.0,
@@ -39,4 +41,6 @@ export const MYSTERY_BOX_CONSTANTS = {
   LIGHTNING_GUN_DAMAGE: 200,
   LIGHTNING_GUN_RANGE: 30,
   LIGHTNING_GUN_MAX_TARGETS: 3,
+
+  INVISIBILITY_DURATION_MS: 12_000,
 } as const;

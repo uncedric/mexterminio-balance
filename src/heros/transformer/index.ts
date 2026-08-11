@@ -11,14 +11,14 @@ export const TRANSFORMER_HERO: Hero = {
   category: HeroCategory.DPS,
   description: 'Condesa de Tlalpan, Francotiradora de élite. Mujer con rama, Un disparo, una baja.',
   stats: {
-    maxHealth: 150,
+    maxHealth: 130,
     moveSpeed: 8.0,
     hitboxSize: 0.7,
   },
   primaryAction: {
     name: 'Rifle de precisión',
     type: ActionType.RAYCAST,
-    damage: 100,
+    damage: 70,
     cooldown: 2.5,
     maxDistance: 200,
     color: '#232322',
@@ -31,6 +31,16 @@ export const TRANSFORMER_HERO: Hero = {
     cooldown: 0,
   },
   meleeAction: defaultMeleeAction(),
+  thirdAction: {
+    name: 'Modo Turbo',
+    description: 'Aumenta su velocidad de movimiento durante 4 segundos.',
+    type: ActionType.MOVEMENT,
+    damage: 0,
+    cooldown: 8.0,
+    duration: 4,
+    speedModifier: 1.7,
+    sound: 'click.ogg',
+  },
   voiceLines: {
     spawn: 'transformer_ready.ogg',
     death: 'transformer_down.ogg',

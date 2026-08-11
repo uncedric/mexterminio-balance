@@ -67,6 +67,16 @@ export const JAGUAR_HERO: Hero = {
     cooldown: JAGUAR_MELEE_COOLDOWN,
     maxDistance: JAGUAR_MELEE_DIST,
   }),
+  thirdAction: {
+    name: 'Piel de Jaguar',
+    description: 'Reduce el daño recibido en un 50% durante 5 segundos.',
+    type: ActionType.MOVEMENT,
+    damage: 0,
+    cooldown: 10.0,
+    duration: 5,
+    damageReduction: 0.5,
+    sound: 'jaguar.ogg',
+  },
   voiceLines: {
     spawn: 'godinez_ready.ogg',
     death: 'godinez_down.ogg',

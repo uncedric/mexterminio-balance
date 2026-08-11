@@ -44,6 +44,16 @@ export const GODINEZ_HERO: Hero = {
     allowPrimaryFire: true,
   },
   meleeAction: defaultMeleeAction(),
+  thirdAction: {
+    name: 'Blindaje Oficinista',
+    description: 'Reduce el daño recibido en un 50% durante 5 segundos.',
+    type: ActionType.MOVEMENT,
+    damage: 0,
+    cooldown: 10.0,
+    duration: 5,
+    damageReduction: 0.5,
+    sound: 'click.ogg',
+  },
   voiceLines: {
     spawn: 'godinez_ready.ogg',
     death: 'godinez_down.ogg',

@@ -24,8 +24,8 @@ export const VOLADOR_HERO: Hero = {
   primaryAction: {
     name: 'Flecha',
     type: ActionType.PROJECTILE,
-    damage: 55,
-    cooldown: 0.8,
+    damage: 40,
+    cooldown: 1.2,
     maxDistance: 200,
     sound: 'scifi_bow.ogg',
     projectile: {
@@ -45,9 +45,19 @@ export const VOLADOR_HERO: Hero = {
     duration: 5,
     cooldown: 7.0,
     impulse: [0, 40, 0],
-    sound: 'volador.ogg',
+    sound: 'volador2.ogg',
   },
   meleeAction: defaultMeleeAction(),
+  thirdAction: {
+    name: 'Viento Veloz',
+    description: 'Aumenta su velocidad de movimiento durante 4 segundos.',
+    type: ActionType.MOVEMENT,
+    damage: 0,
+    cooldown: 8.0,
+    duration: 4,
+    speedModifier: 1.6,
+    sound: 'scifi_bow.ogg',
+  },
   voiceLines: {
     spawn: 'volador_ready.ogg',
     death: 'volador_down.ogg',

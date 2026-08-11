@@ -9,4 +9,3 @@ export enum DeathCause {
   ENVIRONMENTAL = 'environmental',
   LANDMINE = 'landmine',
 }
-

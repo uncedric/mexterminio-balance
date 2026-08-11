@@ -7,11 +7,13 @@ Este repositorio contiene los parámetros de estadísticas de héroes, ajuste de
 ---
 
 > [!IMPORTANT]
+>
 > ### ⚠️ Regla de Idioma para el Código (Code Language Standard)
+>
 > **Todo el código del juego, nombres de variables, archivos, tipos e interfaces en TypeScript DEBEN estar redactados en INGLÉS.**  
-> (*All game code, variable names, file names, TypeScript types, and property keys MUST be in English.*)  
-> 
-> *Las descripciones de los Pull Requests, discusiones, incidencias (issues) y comentarios pueden ser en español o inglés.*
+> (_All game code, variable names, file names, TypeScript types, and property keys MUST be in English._)
+>
+> _Las descripciones de los Pull Requests, discusiones, incidencias (issues) y comentarios pueden ser en español o inglés._
 
 ---
 

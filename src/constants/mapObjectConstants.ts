@@ -5,7 +5,7 @@ import type {
   MarketPlaceObject,
 } from '../maps/mapObjectTypes.ts';
 import { BEACONS } from './beaconConstants.ts';
-import { MYSTERY_BOX_CONSTANTS } from './mysteryBoxConstants.ts';
+import { INVULNERABILITY_CONSTANTS } from './mysteryBoxConstants.ts';
 
 export { type MysteryItemType, AVAILABLE_MYSTERY_ITEMS } from './mysteryBoxConstants.ts';
 
@@ -14,7 +14,7 @@ export { type MysteryItemType, AVAILABLE_MYSTERY_ITEMS } from './mysteryBoxConst
  * Use the per-instance `sound` field on a map object entry to override for a specific object.
  */
 export const MAP_OBJECT_SOUNDS: Partial<Record<string, string>> = {
-  box: 'scifibox.ogg',
+  invulnerability: 'scifibox.ogg',
   coin: 'cash.ogg',
   beacon: 'beacon_hum.ogg',
 };
@@ -44,7 +44,7 @@ export const MAP_OBJECT_CONSTANTS = {
   VEHICLE_BOARD_RADIUS: 5.0,
   VEHICLE_SERVER_VALIDATION_RADIUS: 7.0,
 
-  ...MYSTERY_BOX_CONSTANTS,
+  ...INVULNERABILITY_CONSTANTS,
 } as const;
 
 /**
@@ -99,10 +99,14 @@ export const MAP_OBJECTS: Partial<Record<string, MapObjectConfig[]>> = {
     { id: 'fps_coin_1', type: 'coin', position: [-3.0, 0.0, -3.0] },
   ],
   city: [
-    { id: 'city_box_0', type: 'box', position: [59.756, 3.376, 19.905] },
-    { id: 'city_hp_0', type: 'healthpack', position: [-0.148, -0.501, 0.466] },
+    { id: 'city_box_0', type: 'invulnerability', position: [59.756, 3.376, 19.905] },
+    { id: 'city_box_1', type: 'invulnerability', position: [-62.198, 1.864, -17.562] },
+    { id: 'city_hp_0', type: 'healthpack', position: [28.926, -0.339, -32.815] },
   ],
-  imss: [{ id: 'imss_box_0', type: 'box', position: [41.308, 1.398, 19.909] }],
+  imss: [
+    { id: 'imss_box_0', type: 'invulnerability', position: [41.308, 1.398, 19.909] },
+    { id: 'imss_box_1', type: 'invulnerability', position: [-43.924, 2.214, 10.019] },
+  ],
   metro: [
     { id: 'metro_jp_0', type: 'jump_platform', position: [-25.36, 1.229, 7.468] },
     { id: 'metro_jp_1', type: 'jump_platform', position: [-9.186, 9.564, 8.257] },
@@ -229,12 +233,12 @@ export const MAP_OBJECTS: Partial<Record<string, MapObjectConfig[]>> = {
     { id: 'mexico_ftd4_3', type: 'forest_tree_detailed_4', position: [-140.98, 25.201, 30.578] },
     { id: 'mexico_ftd4_4', type: 'forest_tree_detailed_4', position: [-205.921, 24.391, 33.134] },
     // Vehicles
-    {
-      id: 'mexico_car_0',
-      type: 'vehicle',
-      vehicleType: VehicleType.CAR,
-      position: [-71.609, 35.358, -56.467],
-    },
+    // {
+    //   id: 'mexico_car_0',
+    //   type: 'vehicle',
+    //   vehicleType: VehicleType.CAR,
+    //   position: [-71.609, 35.358, -56.467],
+    // },
     {
       id: 'mexico_pickup_truck_0',
       type: 'vehicle',
@@ -348,12 +352,12 @@ export const MAP_OBJECTS: Partial<Record<string, MapObjectConfig[]>> = {
       maxSkeletons: 6,
       glb: '/models/objects/Cemetery.glb',
     },
-    { id: 'mexico_box_0', type: 'box', position: [0, 34.969, 20] },
-    { id: 'mexico_box_1', type: 'box', position: [82.621, 14.724, 148.397] },
-    { id: 'mexico_box_2', type: 'box', position: [42, 25.525, 80] },
-    { id: 'mexico_box_3', type: 'box', position: [159, 14.902, 160] },
-    { id: 'mexico_box_4', type: 'box', position: [-202.441, 25.392, 95.099] },
-    { id: 'mexico_box_5', type: 'box', position: [204.293, 14.326, 47.945] },
-    { id: 'mexico_box_6', type: 'box', position: [-315.333, 34.475, -6.312] },
+    { id: 'mexico_box_0', type: 'invulnerability', position: [0, 34.969, 20] },
+    { id: 'mexico_box_1', type: 'invulnerability', position: [82.621, 14.724, 148.397] },
+    { id: 'mexico_box_2', type: 'invulnerability', position: [42, 25.525, 80] },
+    { id: 'mexico_box_3', type: 'invulnerability', position: [159, 14.902, 160] },
+    { id: 'mexico_box_4', type: 'invulnerability', position: [-202.441, 25.392, 95.099] },
+    { id: 'mexico_box_5', type: 'invulnerability', position: [204.293, 14.326, 47.945] },
+    { id: 'mexico_box_6', type: 'invulnerability', position: [-315.333, 34.475, -6.312] },
   ],
 };

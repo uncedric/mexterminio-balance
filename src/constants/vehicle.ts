@@ -34,7 +34,7 @@ export const VEHICLE_PHYSICS_CONFIGS: Record<VehicleObject['vehicleType'], Vehic
     angularDamping: 7.5,
   },
   pesero: {
-    topSpeed: 36,
+    topSpeed: 25,
     friction: 0.7,
     drag: 0.5,
     angularDamping: 7.5,

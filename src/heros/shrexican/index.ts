@@ -38,6 +38,15 @@ export const SHREXICAN_HERO: Hero = {
     allowPrimaryFire: true,
   },
   meleeAction: defaultMeleeAction(),
+  thirdAction: {
+    name: 'Grito de Pantano',
+    description: 'Ráfaga de onda expansiva que causa daño a enemigos cercanos.',
+    type: ActionType.AOE,
+    damage: 35,
+    cooldown: 9.0,
+    maxDistance: 7,
+    sound: 'slap.ogg',
+  },
   voiceLines: {
     spawn: 'señor.ogg', // Fixed path
     death: 'slap.ogg', // Fixed path

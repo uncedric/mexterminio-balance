@@ -16,4 +16,5 @@ export enum GameState {
   AUTH = 'auth',
   PRIVACY = 'privacy',
   MODEL_TESTER = 'model_tester',
+  LEADERBOARD = 'leaderboard',
 }

@@ -14,6 +14,13 @@ export interface MapPreset {
   position?: [number, number, number];
 }
 
+export interface ModeRotationEntry {
+  gameMode: GameModeName;
+  mapPresets: MapPreset[];
+  duration: MatchDuration;
+  description?: string;
+}
+
 export interface QueueConfig {
   /** Target number of players per team for a full match. */
   playersPerTeam: number;
@@ -21,39 +28,47 @@ export interface QueueConfig {
   minPlayersPerTeam: number;
   /** Number of teams in the match (currently 2). */
   teamCount: number;
+  /** Rotating mode pool. When set, gameMode/mapPresets/duration are ignored. */
+  modeRotation?: ModeRotationEntry[];
   /** List of map presets the matchmaker rotates through in round-robin order. */
-  mapPresets: MapPreset[];
+  mapPresets?: MapPreset[];
   /** Game mode to use for this queue. */
-  gameMode: GameModeName;
+  gameMode?: GameModeName;
   /** Duration of the match. */
-  duration: MatchDuration;
+  duration?: MatchDuration;
   /** Description to be heard by the users when joining. */
   description?: string;
 }
 
-export const QUEUE_CONFIGS: Record<string, QueueConfig> = {
-  competitive_6v6: {
-    playersPerTeam: 6,
-    minPlayersPerTeam: 1,
-    teamCount: 2,
-    mapPresets: [{ map: MapId.CITY }, { map: MapId.IMSS }],
-    gameMode: GameModeName.TEAM_DEATHMATCH,
-    duration: MatchDuration.THREE_MIN,
-    description: 'Elimina la mayor cantidad de jugadores enemigos',
-  },
-  capture_6v6: {
-    playersPerTeam: 10,
-    minPlayersPerTeam: 1,
-    teamCount: 2,
-    mapPresets: [
-      // DEBUG: commented out to test IMSS beacon
-      { map: MapId.CITY, position: [-5.607, -0.5, -13.48] },
-      { map: MapId.IMSS, position: [11.642, 2.644, -25.617] },
-    ],
-    gameMode: GameModeName.KING_OF_THE_HILL,
-    duration: MatchDuration.THREE_MIN,
-    description: 'Captura la zona central para ganar',
-  },
+export const QUEUE_KEY = 'competitive_rotation';
+
+export const QUEUE_CONFIG: QueueConfig = {
+  playersPerTeam: 6,
+  minPlayersPerTeam: 1,
+  teamCount: 2,
+  modeRotation: [
+    {
+      gameMode: GameModeName.ESCORT,
+      mapPresets: [{ map: MapId.CITY }],
+      duration: MatchDuration.SEVEN_MIN,
+      description: 'Escolta la carga hasta su destino',
+    },
+    /* {
+      gameMode: GameModeName.TEAM_DEATHMATCH,
+      mapPresets: [{ map: MapId.CITY }, { map: MapId.IMSS }],
+      duration: MatchDuration.SEVEN_MIN,
+      description: 'Elimina la mayor cantidad de jugadores enemigos',
+    }, */
+    {
+      gameMode: GameModeName.KING_OF_THE_HILL,
+      mapPresets: [
+        { map: MapId.CITY, position: [60.295, 3.376, 19.208] },
+        { map: MapId.IMSS, position: [12.249, 2.647, -25.154] },
+      ],
+      duration: MatchDuration.SEVEN_MIN,
+      description: 'Captura la zona central para ganar',
+    },
+  ],
 };
 
 /**

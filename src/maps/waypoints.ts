@@ -185,50 +185,42 @@ export function findWaypointPath(
     return Math.sqrt(dx * dx + dy * dy + dz * dz);
   };
 
-  // Find start waypoint (closest node with line-of-sight to the start pos)
+  // Find start waypoint (test top 3 closest nodes with line-of-sight to the start pos)
+  const startWaypointsWithDist = waypoints
+    .map((wp) => ({ wp, d: dist(start, wp.position) }))
+    .sort((a, b) => a.d - b.d);
+
   let startWp: Waypoint | null = null;
-  let startMinDist = Infinity;
-  for (const wp of waypoints) {
-    const d = dist(start, wp.position);
+  const maxStartCandidates = Math.min(3, startWaypointsWithDist.length);
+  for (let i = 0; i < maxStartCandidates; i++) {
+    const { wp } = startWaypointsWithDist[i];
     const hasLos = hasLineOfSight ? hasLineOfSight(start, wp.position) : true;
-    if (hasLos && d < startMinDist) {
-      startMinDist = d;
+    if (hasLos) {
       startWp = wp;
+      break;
     }
   }
-  // Fallback to absolute closest node if line-of-sight fails
-  if (!startWp) {
-    let closestDist = Infinity;
-    for (const wp of waypoints) {
-      const d = dist(start, wp.position);
-      if (d < closestDist) {
-        closestDist = d;
-        startWp = wp;
-      }
-    }
+  if (!startWp && startWaypointsWithDist.length > 0) {
+    startWp = startWaypointsWithDist[0].wp;
   }
 
-  // Find end waypoint (closest node with line-of-sight to the end pos)
+  // Find end waypoint (test top 3 closest nodes with line-of-sight to the end pos)
+  const endWaypointsWithDist = waypoints
+    .map((wp) => ({ wp, d: dist(end, wp.position) }))
+    .sort((a, b) => a.d - b.d);
+
   let endWp: Waypoint | null = null;
-  let endMinDist = Infinity;
-  for (const wp of waypoints) {
-    const d = dist(end, wp.position);
+  const maxEndCandidates = Math.min(3, endWaypointsWithDist.length);
+  for (let i = 0; i < maxEndCandidates; i++) {
+    const { wp } = endWaypointsWithDist[i];
     const hasLos = hasLineOfSight ? hasLineOfSight(wp.position, end) : true;
-    if (hasLos && d < endMinDist) {
-      endMinDist = d;
+    if (hasLos) {
       endWp = wp;
+      break;
     }
   }
-  // Fallback to absolute closest node
-  if (!endWp) {
-    let closestDist = Infinity;
-    for (const wp of waypoints) {
-      const d = dist(end, wp.position);
-      if (d < closestDist) {
-        closestDist = d;
-        endWp = wp;
-      }
-    }
+  if (!endWp && endWaypointsWithDist.length > 0) {
+    endWp = endWaypointsWithDist[0].wp;
   }
 
   if (!startWp || !endWp) {

@@ -53,6 +53,14 @@ export const CHAMAN_HERO: Hero = {
     name: 'Golpe de Bastón',
     damage: 25,
   }),
+  thirdAction: {
+    name: 'Vibrar Alto',
+    description: 'Restaura salud propia mediante meditación espiritual instantánea.',
+    type: ActionType.SELF_HEAL,
+    damage: -50,
+    cooldown: 11,
+    sound: 'vibrandoAlto.ogg',
+  },
   voiceLines: {
     spawn: 'vibrandoAlto.ogg',
     death: 'ferras.ogg',

@@ -47,6 +47,16 @@ export const CHACALON_HERO: Hero = {
   meleeAction: defaultMeleeAction({
     animation: WeaponAnimationType.STAB,
   }),
+  thirdAction: {
+    name: 'Pique Callejero',
+    description: 'Aumenta su velocidad de movimiento durante 4 segundos.',
+    type: ActionType.MOVEMENT,
+    damage: 0,
+    cooldown: 8.0,
+    duration: 4,
+    speedModifier: 1.6,
+    sound: 'knifegun.ogg',
+  },
   voiceLines: {
     spawn: 'ferras.ogg',
     death: 'ferras2.ogg',

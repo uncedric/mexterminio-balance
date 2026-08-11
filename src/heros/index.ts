@@ -73,7 +73,11 @@ export function getSelectableHero(id: string): Hero | undefined {
 
 /** Returns the first hero action whose type matches, regardless of which slot it occupies. */
 export function getHeroActionByType(hero: Hero, type: ActionType): HeroAction | undefined {
-  return [hero.primaryAction, hero.secondaryAction, hero.meleeAction].find((a) => a.type === type);
+  const actions = [hero.primaryAction, hero.secondaryAction, hero.meleeAction];
+  if (hero.thirdAction) {
+    actions.push(hero.thirdAction);
+  }
+  return actions.find((a) => a.type === type);
 }
 
 /** Returns true if the hero's secondary action is a shield that stays active until toggled or depleted. */

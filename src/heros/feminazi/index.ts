@@ -48,6 +48,15 @@ export const FEMINAZI_HERO: Hero = {
     leavesBulletMark: true,
   },
   meleeAction: defaultMeleeAction(),
+  thirdAction: {
+    name: 'Auto-Deconstrucción',
+    description: 'Se cura 70 puntos de vida en 5 segundos.',
+    type: ActionType.SELF_HEAL,
+    damage: -70,
+    cooldown: 15.0,
+    duration: 5,
+    sound: 'feminazi_heal.wav',
+  },
 
   voiceLines: {
     spawn: 'feminazi_ready.ogg',

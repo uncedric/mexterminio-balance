@@ -112,6 +112,7 @@ export interface Hero {
   primaryAction: HeroAction;
   secondaryAction: HeroAction;
   meleeAction: HeroAction;
+  thirdAction?: HeroAction; // Optional 3rd ability activated via Shift key
   voiceLines: HeroVoiceLines;
   weapon?: HeroWeapon; // Held weapon model — omit when modelPath provides the full character
   secondaryWeapon?: HeroWeapon;
