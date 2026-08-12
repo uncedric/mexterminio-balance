@@ -21,7 +21,7 @@ export const SENOR_HERO: Hero = {
   primaryAction: {
     name: 'Escopeta',
     type: ActionType.RAYCAST,
-    damage: 80,
+    damage: 70,
     cooldown: 1.5,
     maxDistance: 50,
     sound: 'revolver.ogg',
