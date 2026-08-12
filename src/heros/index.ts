@@ -47,7 +47,7 @@ export const SELECTABLE_HERO_IDS = new Set([
   // 'whitexican',
   'feminista',
   'senor',
-  'jaguar',
+  // 'jaguar',
   // 'chaman',
   'volador',
   // 'nomada',
