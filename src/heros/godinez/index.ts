@@ -45,13 +45,13 @@ export const GODINEZ_HERO: Hero = {
   },
   meleeAction: defaultMeleeAction(),
   thirdAction: {
-    name: 'Blindaje Oficinista',
-    description: 'Reduce el daño recibido en un 50% durante 5 segundos.',
+    name: 'Corrida Godín',
+    description: 'Aumenta la velocidad en un 60% durante 4 segundos.',
     type: ActionType.MOVEMENT,
     damage: 0,
     cooldown: 10.0,
-    duration: 5,
-    damageReduction: 0.5,
+    duration: 4,
+    speedModifier: 1.6,
     sound: 'click.ogg',
   },
   voiceLines: {
