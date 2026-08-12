@@ -1,5 +1,7 @@
 
 
+import { GAME_CONSTANTS } from './game.ts';
+
 /**
  * FFA respawn positions per map, mirroring the values in client/maps/x/config.ts.
  * Kept here so the server can pick a position on kill without importing client code.
@@ -159,10 +161,17 @@ export const MAP_TEAM_SPAWN_POSITIONS: Record<
   },
 };
 
+function applySpawnOffset([x, y, z]: [number, number, number]): [number, number, number] {
+  const r = GAME_CONSTANTS.RESPAWN_OFFSET_RADIUS;
+  const angle = Math.random() * Math.PI * 2;
+  const distance = Math.random() * r;
+  return [x + Math.cos(angle) * distance, y, z + Math.sin(angle) * distance];
+}
+
 export function getSpawnPosition(map: string, teamId?: string | null): [number, number, number] {
   const teamSpawns = teamId ? MAP_TEAM_SPAWN_POSITIONS[map]?.[teamId] : undefined;
   const pool = teamSpawns ?? MAP_RESPAWN_POSITIONS[map] ?? [[0, 10, 0]];
-  return pool[0];
+  return applySpawnOffset(pool[0]);
 }
 
 export function pickRespawnPosition({
