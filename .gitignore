@@ -2,3 +2,6 @@ node_modules/
 dist/
 .DS_Store
 *.log
+
+# Token-heavy: keep lockfile out of AI tool file search
+package-lock.json
