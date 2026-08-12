@@ -20,7 +20,7 @@ export const GODINEZ_HERO: Hero = {
   description:
     'Empleado que rinde culto al café de máquina, sobrevive al tráfico por la quincena y encuentra su mayor libertad en el viernes casual y el tupper de cristal.',
   stats: {
-    maxHealth: 250,
+    maxHealth: 350,
     moveSpeed: 8.0,
     hitboxSize: 1.0,
   },
