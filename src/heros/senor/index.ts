@@ -32,7 +32,7 @@ export const SENOR_HERO: Hero = {
   secondaryAction: {
     name: 'Pedo de señor con propulsión',
     type: ActionType.AOE,
-    damage: 100,
+    damage: 50,
     cooldown: 13.0,
     maxDistance: 5.0,
     duration: 1.0,
