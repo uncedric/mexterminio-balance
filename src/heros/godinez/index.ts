@@ -10,7 +10,7 @@ import {
 import { ADVENTURER_RANGED_2H_ANIMATIONS } from '../defaults.ts';
 
 const GODINEZ_SHIELD_DURATION = 20;
-const GODINEZ_SHIELD_COOLDOWN = 8;
+const GODINEZ_SHIELD_COOLDOWN = 6;
 
 export const GODINEZ_HERO: Hero = {
   id: 'godinez',
