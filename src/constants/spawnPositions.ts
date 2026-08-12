@@ -1,5 +1,4 @@
-import { BEACONS } from './beaconConstants.ts';
-import { GAME_CONSTANTS } from './game.ts';
+
 
 /**
  * FFA respawn positions per map, mirroring the values in client/maps/x/config.ts.
@@ -160,36 +159,10 @@ export const MAP_TEAM_SPAWN_POSITIONS: Record<
   },
 };
 
-function applySpawnOffset([x, y, z]: [number, number, number]): [number, number, number] {
-  const r = GAME_CONSTANTS.RESPAWN_OFFSET_RADIUS;
-  const angle = Math.random() * Math.PI * 2;
-  const distance = Math.random() * r;
-  return [x + Math.cos(angle) * distance, y, z + Math.sin(angle) * distance];
-}
-
 export function getSpawnPosition(map: string, teamId?: string | null): [number, number, number] {
   const teamSpawns = teamId ? MAP_TEAM_SPAWN_POSITIONS[map]?.[teamId] : undefined;
   const pool = teamSpawns ?? MAP_RESPAWN_POSITIONS[map] ?? [[0, 10, 0]];
-
-  // Filter out spawn positions that are too close to beacons on this map to prevent immediate bot attacks
-  const mapBeacons = BEACONS[map];
-  if (mapBeacons && mapBeacons.length > 0) {
-    const MIN_DISTANCE_TO_BEACON = 35; // 35 meters safety radius
-    const safePool = pool.filter((pos) => {
-      return !mapBeacons.some((beacon) => {
-        const dx = pos[0] - beacon.position[0];
-        const dz = pos[2] - beacon.position[2];
-        const dist2D = Math.sqrt(dx * dx + dz * dz);
-        return dist2D < MIN_DISTANCE_TO_BEACON;
-      });
-    });
-
-    if (safePool.length > 0) {
-      return applySpawnOffset(safePool[Math.floor(Math.random() * safePool.length)]);
-    }
-  }
-
-  return applySpawnOffset(pool[Math.floor(Math.random() * pool.length)]);
+  return pool[0];
 }
 
 export function pickRespawnPosition({
