@@ -6,9 +6,9 @@
 import { Hero } from '../types.ts';
 import { HeroCategory, AdventurerAnimation, WeaponAnimationType } from '../../enums/index.ts';
 import { ActionType } from '../../enums/ActionType.ts';
-import { LEFT_HAND_BONE, defaultMeleeAction, thirdPersonHandWeapon } from '../defaults.ts';
+import { RIGHT_HAND_BONE, defaultMeleeAction, thirdPersonHandWeapon } from '../defaults.ts';
 
-const JAGUAR_SWORD_DAMAGE = 25;
+const JAGUAR_SWORD_DAMAGE = 35;
 const JAGUAR_SWORD_COOLDOWN = 0.7;
 // const JAGUAR_SWORD_DIST = 3.2;
 
@@ -106,7 +106,7 @@ export const JAGUAR_HERO: Hero = {
   }),
   thirdPersonSecondaryWeapon: thirdPersonHandWeapon('/models/weapons/escudo.glb', {
     scale: 1.0,
-    bone: LEFT_HAND_BONE,
+    bone: RIGHT_HAND_BONE,
   }),
   secondaryWeapon: {
     modelPath: '/models/weapons/escudo.glb',
