@@ -33,7 +33,7 @@ export const SENOR_HERO: Hero = {
     name: 'Pedo de señor con propulsión',
     type: ActionType.AOE,
     damage: 100,
-    cooldown: 10.0,
+    cooldown: 13.0,
     maxDistance: 5.0,
     duration: 1.0,
     sound: 'fart.wav',
