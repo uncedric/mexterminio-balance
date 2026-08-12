@@ -9,7 +9,7 @@ import {
 
 export const SHREXICAN_HERO: Hero = {
   id: 'shrexican',
-  name: 'Shrexican',
+  name: 'Mike',
   race: 'Shrexican',
   category: HeroCategory.HEALER,
   description:
@@ -52,6 +52,7 @@ export const SHREXICAN_HERO: Hero = {
     death: 'slap.ogg', // Fixed path
   },
   modelPath: '/models/heros/Shrexican.glb',
+  thumbnailPath: '/heros/thumbnails/shrexican.webp',
   renderMode: 'adventurer',
   animations: ADVENTURER_RANGED_1H_ANIMATIONS,
   weapon: {

@@ -6,7 +6,7 @@ import { defaultMeleeAction, thirdPersonHandWeapon } from '../defaults.ts';
 
 export const TRANSFORMER_HERO: Hero = {
   id: 'transformer',
-  name: 'Yamileth',
+  name: 'Yatzil',
   race: 'Transformer',
   category: HeroCategory.DPS,
   description: 'Condesa de Tlalpan, Francotiradora de élite. Mujer con rama, Un disparo, una baja.',
@@ -46,6 +46,7 @@ export const TRANSFORMER_HERO: Hero = {
     death: 'transformer_down.ogg',
   },
   modelPath: '/models/heros/transformer.glb',
+  thumbnailPath: '/heros/thumbnails/transformer.webp',
   renderMode: 'adventurer',
   animations: {
     idle: AdventurerAnimation.IDLE_A,
