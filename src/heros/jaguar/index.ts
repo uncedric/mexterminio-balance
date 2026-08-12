@@ -8,7 +8,7 @@ import { HeroCategory, AdventurerAnimation, WeaponAnimationType } from '../../en
 import { ActionType } from '../../enums/ActionType.ts';
 import { LEFT_HAND_BONE, defaultMeleeAction, thirdPersonHandWeapon } from '../defaults.ts';
 
-const JAGUAR_SWORD_DAMAGE = 40;
+const JAGUAR_SWORD_DAMAGE = 25;
 const JAGUAR_SWORD_COOLDOWN = 0.7;
 // const JAGUAR_SWORD_DIST = 3.2;
 
@@ -58,8 +58,7 @@ export const JAGUAR_HERO: Hero = {
     speedModifier: JAGUAR_SHIELD_SPEED_MODIFIER,
     damageReduction: 0.2, // 80% reduction
     holdToActivate: true,
-    // sound: 'jaguar.ogg',
-    allowPrimaryFire: false,
+    allowPrimaryFire: true,
   },
   meleeAction: defaultMeleeAction({
     name: 'Golpe',
@@ -69,13 +68,12 @@ export const JAGUAR_HERO: Hero = {
   }),
   thirdAction: {
     name: 'Piel de Jaguar',
-    description: 'Reduce el daño recibido en un 50% durante 5 segundos.',
+    description: 'Aumenta su velocidad de movimiento.',
     type: ActionType.MOVEMENT,
     damage: 0,
-    cooldown: 10.0,
-    duration: 5,
-    damageReduction: 0.5,
-    sound: 'jaguar.ogg',
+    cooldown: 8.0,
+    duration: 4,
+    speedModifier: 1.6,
   },
   voiceLines: {
     spawn: 'godinez_ready.ogg',
@@ -113,7 +111,7 @@ export const JAGUAR_HERO: Hero = {
   secondaryWeapon: {
     modelPath: '/models/weapons/escudo.glb',
     scale: 1,
-    position: [0.7, -0.3, -0.5],
+    position: [-0.7, -0.3, -0.5],
     rotation: [0, Math.PI, 0],
   },
 };
