@@ -23,7 +23,7 @@ export const SENOR_HERO: Hero = {
     type: ActionType.RAYCAST,
     damage: 70,
     cooldown: 1.5,
-    maxDistance: 50,
+    maxDistance: 45,
     sound: 'revolver.ogg',
     color: '#ffff00',
     rayWidth: 0.5,
