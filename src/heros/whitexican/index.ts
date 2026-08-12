@@ -53,6 +53,7 @@ export const WHITEXICAN_HERO: Hero = {
     death: 'whitexican_down.ogg',
   },
   modelPath: '/models/adventurers/Characters/gltf/Mannequin_Medium.glb',
+  thumbnailPath: '/heros/thumbnails/whitexican.webp',
   renderMode: 'adventurer',
   animations: {
     idle: AdventurerAnimation.IDLE_A,

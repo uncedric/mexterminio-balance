@@ -59,6 +59,7 @@ export const GODINEZ_HERO: Hero = {
     death: 'godinez_down.ogg',
   },
   modelPath: '/models/heros/godin.glb',
+  thumbnailPath: '/heros/thumbnails/godinez.webp',
   renderMode: 'adventurer',
   animations: ADVENTURER_RANGED_2H_ANIMATIONS,
   weapon: {

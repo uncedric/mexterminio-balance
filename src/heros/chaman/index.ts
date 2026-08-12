@@ -66,6 +66,7 @@ export const CHAMAN_HERO: Hero = {
     death: 'ferras.ogg',
   },
   modelPath: '/models/adventurers/Characters/gltf/Druid.glb',
+  thumbnailPath: '/heros/thumbnails/chaman.webp',
   renderMode: 'adventurer',
   animations: {
     idle: AdventurerAnimation.IDLE_B,

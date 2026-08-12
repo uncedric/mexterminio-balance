@@ -61,10 +61,7 @@ export const QUEUE_CONFIG: QueueConfig = {
     }, */
     {
       gameMode: GameModeName.KING_OF_THE_HILL,
-      mapPresets: [
-        { map: MapId.CITY, position: [60.295, 3.376, 19.208] },
-        { map: MapId.IMSS, position: [12.249, 2.647, -25.154] },
-      ],
+      mapPresets: [{ map: MapId.CITY, position: [60.295, 3.376, 19.208] }],
       duration: MatchDuration.SEVEN_MIN,
       description: 'Captura la zona central para ganar',
     },

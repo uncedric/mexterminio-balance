@@ -82,6 +82,7 @@ export const CHACALON_HERO: Hero = {
     scale: 1,
   }),
   modelPath: '/models/heros/chacal.glb',
+  thumbnailPath: '/heros/thumbnails/chacalon.webp',
   renderMode: 'adventurer',
   animations: {
     idle: AdventurerAnimation.IDLE_A,

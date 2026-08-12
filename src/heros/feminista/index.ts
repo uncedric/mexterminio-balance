@@ -63,6 +63,7 @@ export const FEMINISTA_HERO: Hero = {
     death: 'feminista_down.ogg',
   },
   modelPath: '/models/heros/feminista.glb',
+  thumbnailPath: '/heros/thumbnails/feminista.webp',
   renderMode: 'adventurer',
   animations: ADVENTURER_RANGED_2H_ANIMATIONS,
   weapon: {
