@@ -44,7 +44,7 @@ export const QUEUE_KEY = 'competitive_rotation';
 
 export const QUEUE_CONFIG: QueueConfig = {
   playersPerTeam: 6,
-  minPlayersPerTeam: 1,
+  minPlayersPerTeam: 5,
   teamCount: 2,
   modeRotation: [
     {
