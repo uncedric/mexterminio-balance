@@ -28,7 +28,7 @@ export const FEMINISTA_HERO: Hero = {
     type: ActionType.RAYCAST,
     damage: 15,
     cooldown: 1.2,
-    maxDistance: 50,
+    maxDistance: 70,
     sound: 'spray.ogg',
     burstCount: 6,
     burstInterval: 100,
