@@ -56,7 +56,7 @@ export const SENOR_HERO: Hero = {
     death: 'senor_down.ogg',
   },
   modelPath: '/models/heros/Senor.glb',
-  thumbnailPath: '/heros/senor.png',
+  thumbnailPath: '/heros/thumbnails/senor.webp',
   renderMode: 'adventurer',
   animations: ADVENTURER_RANGED_2H_ANIMATIONS,
   weapon: {

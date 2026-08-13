@@ -67,7 +67,7 @@ export const PERRO_HERO: Hero = {
   //   barrelPosition: [0, 0.05, -0.3],
   // },
   modelPath: '/models/heros/perro.glb',
-  thumbnailPath: '/heros/perro.png',
+  thumbnailPath: '/heros/thumbnails/perro.webp',
   renderMode: 'standalone',
   animations: {
     idle: PerroAnimation.IDLE,

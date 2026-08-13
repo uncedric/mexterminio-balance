@@ -59,6 +59,7 @@ export const DOCTOR_HERO: Hero = {
     death: 'godinez_down.ogg',
   },
   modelPath: '/models/adventurers/Characters/gltf/Mannequin_Medium.glb',
+  thumbnailPath: '/heros/thumbnails/doctor.webp',
   renderMode: 'adventurer',
   animations: {
     idle: AdventurerAnimation.IDLE_A,

@@ -121,6 +121,15 @@ function validateHero(hero: Hero): ValidationError[] {
     });
   }
 
+  if (hero.thumbnailPath && !hero.thumbnailPath.startsWith('/heros/thumbnails/')) {
+    errors.push({
+      heroId: hero.id,
+      field: 'thumbnailPath',
+      message: 'Thumbnail path should start with /heros/thumbnails/',
+      value: hero.thumbnailPath,
+    });
+  }
+
   return errors;
 }
 

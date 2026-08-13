@@ -50,6 +50,7 @@ export const THERIAN_HERO: Hero = {
     death: 'therian_down.ogg',
   },
   modelPath: '/models/adventurers/Characters/gltf/Mannequin_Medium.glb',
+  thumbnailPath: '/heros/thumbnails/therian.webp',
   renderMode: 'adventurer',
   animations: {
     idle: AdventurerAnimation.IDLE_A,

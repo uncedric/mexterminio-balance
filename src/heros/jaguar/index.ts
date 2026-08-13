@@ -80,7 +80,7 @@ export const JAGUAR_HERO: Hero = {
     death: 'godinez_down.ogg',
   },
   modelPath: '/models/heros/jaguar.glb',
-  thumbnailPath: '/heros/jaguar.png',
+  thumbnailPath: '/heros/thumbnails/jaguar.webp',
   renderMode: 'adventurer',
   animations: {
     idle: AdventurerAnimation.IDLE_A,

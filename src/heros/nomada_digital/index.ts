@@ -49,6 +49,7 @@ export const NOMADA_DIGITAL_HERO: Hero = {
     death: 'godinez_down.ogg',
   },
   modelPath: '/models/heros/nomada.glb',
+  thumbnailPath: '/heros/thumbnails/nomada.webp',
   renderMode: 'adventurer',
   animations: ADVENTURER_RANGED_1H_ANIMATIONS,
   weapon: {

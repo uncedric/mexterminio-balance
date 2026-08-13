@@ -50,7 +50,7 @@ export const BUCHONA_HERO: Hero = {
     death: 'buchona_down.ogg',
   },
   modelPath: '/models/heros/buchona.glb',
-  thumbnailPath: '/heros/buchona.png',
+  thumbnailPath: '/heros/thumbnails/buchona.webp',
   renderMode: 'adventurer',
   animations: {
     idle: AdventurerAnimation.IDLE_A,

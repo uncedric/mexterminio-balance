@@ -63,7 +63,7 @@ export const VOLADOR_HERO: Hero = {
     death: 'volador_down.ogg',
   },
   modelPath: '/models/heros/volador.glb',
-  thumbnailPath: '/heros/volador.png',
+  thumbnailPath: '/heros/thumbnails/volador.webp',
   renderMode: 'adventurer',
   weapon: {
     modelPath: '/models/weapons/CrossBow2H.glb',
