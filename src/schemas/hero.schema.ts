@@ -30,6 +30,12 @@ export const ProjectileConfigSchema = z.object({
   shape: z.enum(['cylinder', 'sphere']).optional(),
 });
 
+export const TargetConfigSchema = z.object({
+  type: z.enum(['ENEMY', 'ALLY']),
+  range: z.number().positive(),
+  includeBots: z.boolean().optional(),
+});
+
 export const HeroActionSchema = z.object({
   name: z.string().min(1),
   description: z.string().optional(),
@@ -45,6 +51,7 @@ export const HeroActionSchema = z.object({
   burstInterval: z.number().positive().optional(),
   speedModifier: z.number().min(0).max(5).optional(),
   projectile: ProjectileConfigSchema.optional(),
+  targeting: TargetConfigSchema.optional(),
 });
 
 export const HeroSchema = z.object({

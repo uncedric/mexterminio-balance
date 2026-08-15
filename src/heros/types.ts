@@ -21,6 +21,7 @@ export interface ProjectileConfig {
 export interface TargetConfig {
   type: 'ENEMY' | 'ALLY';
   range: number;
+  includeBots?: boolean;
 }
 
 export interface HeroAction {
