@@ -56,6 +56,13 @@ export interface HeroAction {
   knockback?: number;
 }
 
+export type FunFactKind = 'lore' | 'stat';
+
+export interface FunFact {
+  kind: FunFactKind;
+  text: string;
+}
+
 export interface HeroStats {
   maxHealth: number;
   moveSpeed: number;
@@ -109,6 +116,8 @@ export interface Hero {
   race: string;
   category: HeroCategory;
   description: string;
+  /** Curious facts about the character: funny lore and real statistics about their race. */
+  funFacts?: FunFact[];
   stats: HeroStats;
   primaryAction: HeroAction;
   secondaryAction: HeroAction;
